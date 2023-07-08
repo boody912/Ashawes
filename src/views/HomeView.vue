@@ -53,15 +53,15 @@
               </span>
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
 
 
             <div class="navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav  mx-auto ">
-                 <i class='bx bx-menu' id="menu-icon"></i>
+                <i class='bx bx-menu' id="menu-icon"></i>
 
                 <li class="nav-item active">
                   <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
@@ -148,6 +148,30 @@
             </div>
           </nav>
         </div>
+
+        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <a class="navbar-brand" href="#">Ashawes</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <router-link class="nav-link" to="/">Home</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/menu">Menu</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/about">About</router-link>
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link" to="/book">Book a Table</router-link>
+              </li>
+            </ul>
+          </div>
+        </nav> -->
       </header>
 
 
@@ -1382,6 +1406,11 @@
 import { onMounted } from 'vue'
 
 export default {
+  data() {
+    return {
+      navOpen: false,
+    };
+  },
   mounted() {
     // Add external scripts to the DOM
     const script1 = document.createElement('script')
@@ -1418,6 +1447,12 @@ export default {
     const script8 = document.createElement('script')
     script8.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap'
     document.body.appendChild(script8)
+
+    document.addEventListener("click", (event) => {
+      if (this.navOpen && !event.target.closest(".navbar")) {
+        this.hideNav();
+      }
+    });
   },
   setup() {
     // Alternatively, you can import scripts using onMounted
@@ -1431,9 +1466,22 @@ export default {
       import('../assets/js/custom')
       import('https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap')
     })
-  }
-
+  },
+  methods: {
+    toggleNav() {
+      const nav = document.querySelector("#navbarNav");
+      nav.classList.toggle("show");
+    },
+    hideNav() {
+      this.navOpen = false;
+    },
+  }, 
 }
 
-
 </script>
+
+<style>
+.navbar-collapse.show {
+  display: block;
+}
+</style>
