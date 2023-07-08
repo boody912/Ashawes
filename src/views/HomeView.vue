@@ -47,111 +47,55 @@
       <header class="header_section">
         <div class="container">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="#">
               <span>
                 Ashawes
               </span>
             </a>
 
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" v-on:click="toggleNavbar()" type="button" data-toggle="collapse"
+              data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="navbar-collapse" v-if="isCollapsed" id="navbarSupportedContent">
+            <div class="navbar-collapse" v-if="!isCollapsed" id="navbarSupportedContent">
               <ul class="navbar-nav  mx-auto ">
                 <i class='bx bx-menu' id="menu-icon"></i>
 
                 <li class="nav-item active">
-                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="menu.html">product</a>
+                  <a class="nav-link" href="/product">product</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="about.html">About</a>
+                  <a class="nav-link" href="/about">About</a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="book.html">Book Table</a>
-                </li>
+
               </ul>
               <div class="user_option">
-                <a href="" class="user_link">
+                <!-- <a href="" class="user_link">
                   <i class="fa fa-user" aria-hidden="true"></i>
-                </a>
+                </a> -->
                 <a class="cart_link" href="#">
-                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                    style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                    <g>
-                      <g>
-                        <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                 c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                      </g>
-                    </g>
-                    <g>
-                      <g>
-                        <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                 C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                 c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                 C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                      </g>
-                    </g>
-                    <g>
-                      <g>
-                        <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                 c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                      </g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
-                    <g>
-                    </g>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                    stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round"
+                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                   </svg>
                 </a>
-                <form class="form-inline">
+                <!-- <form class="form-inline">
                   <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                     <i class="fa fa-search" aria-hidden="true"></i>
                   </button>
                 </form>
                 <a href="" class="order_online">
                   Order Online
-                </a>
+                </a> -->
               </div>
             </div>
           </nav>
-          
+
         </div>
 
       </header>
@@ -166,19 +110,18 @@
                 <div class="row">
                   <div class="col-md-7 col-lg-6 ">
                     <div class="detail-box">
-                      <h1>
-                        Fast Food Restaurant
-                      </h1>
-                      <p>
-                        Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
-                        quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
-                        nihil ducimus libero ipsam.
-                      </p>
-                      <div class="btn-box">
+                      <h1> Local Clothing Brand </h1>
+
+                      <p> Welcome to our local clothing brand, where we celebrate individuality and creativity. Our
+                        clothing is designed to inspire and empower you to express yourself and showcase your unique
+                        personality.
+                        we offer a wide variety of options to suit every taste. Join our community of fashion-forward
+                        individuals and discover your own. </p>
+                      <!--  <div class="btn-box">
                         <a href="" class="btn1">
                           Order Now
                         </a>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -189,19 +132,19 @@
                 <div class="row">
                   <div class="col-md-7 col-lg-6 ">
                     <div class="detail-box">
-                      <h1>
-                        Fast Food Restaurant
-                      </h1>
-                      <p>
-                        Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
-                        quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
-                        nihil ducimus libero ipsam.
+                      <h1> Local Clothing Brand </h1>
+
+                      <p> At our local clothing brand
+                        we believe that fashion should be sustainable and affordable. That's why we use environmentally
+                        friendly materials and production methods to create our stylish and comfortable clothing. We want
+                        to make a positive impact on our community and the environment, while still offering high-quality
+                        products. Join us in our mission to make fashion more sustainable and accessible for everyone.
                       </p>
-                      <div class="btn-box">
+                      <!--  <div class="btn-box">
                         <a href="" class="btn1">
                           Order Now
                         </a>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -212,19 +155,17 @@
                 <div class="row">
                   <div class="col-md-7 col-lg-6 ">
                     <div class="detail-box">
-                      <h1>
-                        Fast Food Restaurant
-                      </h1>
-                      <p>
-                        Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam
-                        quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos
-                        nihil ducimus libero ipsam.
-                      </p>
-                      <div class="btn-box">
+                      <h1> Local Clothing Brand </h1>
+
+                      <p> Discover the latest collection of high-quality clothing made with passion and creativity. Our
+                        brand is dedicated to providing stylish and comfortable clothing for every occasion. We take pride
+                        in using only the finest materials and paying attention to every detail to ensure that you receive
+                        the best quality product. Shop with us and experience the comfort and style that you deserve. </p>
+                      <!-- <div class="btn-box">
                         <a href="" class="btn1">
                           Order Now
                         </a>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
@@ -253,69 +194,20 @@
             <div class="col-md-6  ">
               <div class="box ">
                 <div class="img-box">
-                  <img src="images/o1.jpg" alt="">
+                  <img src="/src/assets/images/pic.png" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Tasty Thursdays
+                    tshirt
                   </h5>
                   <h6>
                     <span>20%</span> Off
                   </h6>
                   <a href="">
-                    Order Now <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                      style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                      <g>
-                        <g>
-                          <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                   c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                   C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                   c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                   C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                   c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                        </g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
+                    Order Now <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                      stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
                   </a>
                 </div>
@@ -324,69 +216,20 @@
             <div class="col-md-6  ">
               <div class="box ">
                 <div class="img-box">
-                  <img src="images/o2.jpg" alt="">
+                  <img src="/src/assets/images/short.jpg" alt="">
                 </div>
                 <div class="detail-box">
                   <h5>
-                    Pizza Days
+                    shorts
                   </h5>
                   <h6>
                     <span>15%</span> Off
                   </h6>
                   <a href="">
-                    Order Now <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                      style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                      <g>
-                        <g>
-                          <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                   c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                   C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                   c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                   C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                   c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                        </g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
-                      <g>
-                      </g>
+                    Order Now <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                      stroke="currentColor" className="w-6 h-6">
+                      <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
                   </a>
                 </div>
@@ -399,98 +242,41 @@
 
     <!-- end offer section -->
 
-    <!-- food section -->
+    <!-- product section -->
 
     <section class="food_section layout_padding-bottom">
       <div class="container">
         <div class="heading_container heading_center">
           <h2>
-            Our Menu
+            Our Product
           </h2>
         </div>
 
         <ul class="filters_menu">
           <li class="active" data-filter="*">All</li>
-          <li data-filter=".burger">Burger</li>
-          <li data-filter=".pizza">Pizza</li>
-          <li data-filter=".pasta">Pasta</li>
-          <li data-filter=".fries">Fries</li>
+          <li data-filter=".tshirts">tshirts</li>
+          <li data-filter=".short">shorts</li>
         </ul>
 
         <div class="filters-content">
           <div class="row grid">
-            <div class="col-sm-6 col-lg-4 all pizza">
+            <div class="col-sm-6 col-lg-4 all tshirts">
               <div class="box">
                 <div>
                   <div class="img-box">
-                    <img src="images/f1.png" alt="">
+                    <img src="/src/assets/images/pic.png" alt="">
                   </div>
                   <div class="detail-box">
-                    <h5>
-                      Delicious Pizza
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
+                    <h5>tshirt</h5>
+                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
+                      sed eaque</p>
                     <div class="options">
-                      <h6>
-                        $20
-                      </h6>
+                      <h6>$20</h6>
                       <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                          stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                         </svg>
                       </a>
                     </div>
@@ -498,631 +284,23 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 all burger">
+            <div class="col-sm-6 col-lg-4 all short">
               <div class="box">
                 <div>
                   <div class="img-box">
-                    <img src="images/f2.png" alt="">
+                    <img src="/src/assets/images/short.jpg" alt="">
                   </div>
                   <div class="detail-box">
-                    <h5>
-                      Delicious Burger
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
+                    <h5>Shorts</h5>
+                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
+                      sed eaque</p>
                     <div class="options">
-                      <h6>
-                        $15
-                      </h6>
+                      <h6>$25</h6>
                       <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 all pizza">
-              <div class="box">
-                <div>
-                  <div class="img-box">
-                    <img src="images/f3.png" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Delicious Pizza
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
-                    <div class="options">
-                      <h6>
-                        $17
-                      </h6>
-                      <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 all pasta">
-              <div class="box">
-                <div>
-                  <div class="img-box">
-                    <img src="images/f4.png" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Delicious Pasta
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
-                    <div class="options">
-                      <h6>
-                        $18
-                      </h6>
-                      <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 all fries">
-              <div class="box">
-                <div>
-                  <div class="img-box">
-                    <img src="images/f5.png" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      French Fries
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
-                    <div class="options">
-                      <h6>
-                        $10
-                      </h6>
-                      <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 all pizza">
-              <div class="box">
-                <div>
-                  <div class="img-box">
-                    <img src="images/f6.png" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Delicious Pizza
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
-                    <div class="options">
-                      <h6>
-                        $15
-                      </h6>
-                      <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 all burger">
-              <div class="box">
-                <div>
-                  <div class="img-box">
-                    <img src="images/f7.png" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Tasty Burger
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
-                    <div class="options">
-                      <h6>
-                        $12
-                      </h6>
-                      <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 all burger">
-              <div class="box">
-                <div>
-                  <div class="img-box">
-                    <img src="images/f8.png" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Tasty Burger
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
-                    <div class="options">
-                      <h6>
-                        $14
-                      </h6>
-                      <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 all pasta">
-              <div class="box">
-                <div>
-                  <div class="img-box">
-                    <img src="images/f9.png" alt="">
-                  </div>
-                  <div class="detail-box">
-                    <h5>
-                      Delicious Pasta
-                    </h5>
-                    <p>
-                      Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque
-                    </p>
-                    <div class="options">
-                      <h6>
-                        $10
-                      </h6>
-                      <a href="">
-                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 456.029 456.029"
-                          style="enable-background:new 0 0 456.029 456.029;" xml:space="preserve">
-                          <g>
-                            <g>
-                              <path d="M345.6,338.862c-29.184,0-53.248,23.552-53.248,53.248c0,29.184,23.552,53.248,53.248,53.248
-                       c29.184,0,53.248-23.552,53.248-53.248C398.336,362.926,374.784,338.862,345.6,338.862z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M439.296,84.91c-1.024,0-2.56-0.512-4.096-0.512H112.64l-5.12-34.304C104.448,27.566,84.992,10.67,61.952,10.67H20.48
-                       C9.216,10.67,0,19.886,0,31.15c0,11.264,9.216,20.48,20.48,20.48h41.472c2.56,0,4.608,2.048,5.12,4.608l31.744,216.064
-                       c4.096,27.136,27.648,47.616,55.296,47.616h212.992c26.624,0,49.664-18.944,55.296-45.056l33.28-166.4
-                       C457.728,97.71,450.56,86.958,439.296,84.91z" />
-                            </g>
-                          </g>
-                          <g>
-                            <g>
-                              <path d="M215.04,389.55c-1.024-28.16-24.576-50.688-52.736-50.688c-29.696,1.536-52.224,26.112-51.2,55.296
-                       c1.024,28.16,24.064,50.688,52.224,50.688h1.024C193.536,443.31,216.576,418.734,215.04,389.55z" />
-                            </g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
-                          <g>
-                          </g>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
+                          stroke="currentColor" className="w-6 h-6">
+                          <path strokeLinecap="round" strokeLinejoin="round"
+                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                         </svg>
                       </a>
                     </div>
@@ -1132,6 +310,7 @@
             </div>
           </div>
         </div>
+
         <div class="btn-box">
           <a href="">
             View More
@@ -1150,14 +329,14 @@
         <div class="row">
           <div class="col-md-6 ">
             <div class="img-box">
-              <img src="images/about-img.png" alt="">
+              <img src="src/assets/images/about-img.png" alt="">
             </div>
           </div>
           <div class="col-md-6">
             <div class="detail-box">
               <div class="heading_container">
                 <h2>
-                  We Are Feane
+                  We Are ashawes
                 </h2>
               </div>
               <p>
@@ -1177,72 +356,11 @@
 
     <!-- end about section -->
 
-    <!-- book section -->
-    <section class="book_section layout_padding">
-      <div class="container">
-        <div class="heading_container">
-          <h2>
-            Book A Table
-          </h2>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="form_container">
-              <form action="">
-                <div>
-                  <input type="text" class="form-control" placeholder="Your Name" />
-                </div>
-                <div>
-                  <input type="text" class="form-control" placeholder="Phone Number" />
-                </div>
-                <div>
-                  <input type="email" class="form-control" placeholder="Your Email" />
-                </div>
-                <div>
-                  <select class="form-control nice-select wide">
-                    <option value="" disabled selected>
-                      How many persons?
-                    </option>
-                    <option value="">
-                      2
-                    </option>
-                    <option value="">
-                      3
-                    </option>
-                    <option value="">
-                      4
-                    </option>
-                    <option value="">
-                      5
-                    </option>
-                  </select>
-                </div>
-                <div>
-                  <input type="date" class="form-control">
-                </div>
-                <div class="btn_box">
-                  <button>
-                    Book Now
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="map_container ">
-              <div id="googleMap"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- end book section -->
-
     <!-- client section -->
 
     <section class="client_section layout_padding-bottom">
       <div class="container">
-        <div class="heading_container heading_center psudo_white_primary mb_45">
+        <!-- <div class="heading_container heading_center psudo_white_primary mb_45">
           <h2>
             What Says Our Customers
           </h2>
@@ -1288,7 +406,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -1304,12 +422,12 @@
                 Contact Us
               </h4>
               <div class="contact_link_box">
-                <a href="">
+              <!--   <a href="">
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                   <span>
                     Location
                   </span>
-                </a>
+                </a> -->
                 <a href="">
                   <i class="fa fa-phone" aria-hidden="true"></i>
                   <span>
@@ -1328,7 +446,7 @@
           <div class="col-md-4 footer-col">
             <div class="footer_detail">
               <a href="" class="footer-logo">
-                Feane
+                Ashawes
               </a>
               <p>
                 Necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin
@@ -1367,17 +485,12 @@
         </div>
         <div class="footer-info">
           <p>
-            &copy; <span id="displayYear"></span> All Rights Reserved By
-            <a href="https://html.design/">Free Html Templates</a><br><br>
-            &copy; <span id="displayYear"></span> Distributed By
-            <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+            &copy; <span id="displayYear"></span> All Rights Reserved 2023
           </p>
         </div>
       </div>
     </footer>
     <!-- footer section -->
-
-
 
   </body>
 </template>
@@ -1389,22 +502,26 @@ import { onMounted } from 'vue'
 
 export default {
   data() {
-        return {
-            isCollapsed: true,
-            links: [
-                { path: "/", label: "Home" },
-                { path: "/menu", label: "Menu" },
-                { path: "/about", label: "About" },
-                { path: "/book", label: "Book Table" },
-            ],
-        };
+    return {
+      isCollapsed: true,
+      links: [
+        { path: "/", label: "Home" },
+        { path: "/menu", label: "Menu" },
+        { path: "/about", label: "About" },
+        { path: "/book", label: "Book Table" },
+      ],
+    };
+  },
+  methods: {
+    toggleNavbar() {
+      this.isCollapsed = !this.isCollapsed;
     },
-    methods: {
-        toggleNavbar() {
-            this.isCollapsed = !this.isCollapsed;
-        },
-    },
+  },
+
   mounted() {
+    if (window.innerWidth >= 992) {
+      this.isCollapsed = false;
+    }
     // Add external scripts to the DOM
     const script1 = document.createElement('script')
     script1.src = '../assets/js/jquery-3.4.1.min'
@@ -1460,7 +577,7 @@ export default {
       import('https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap')
     })
   },
- 
+
 }
 
 </script>

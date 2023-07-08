@@ -137,6 +137,58 @@ a:focus {
   -o-object-position: right top;
      object-position: right top;
 }
+ /* video start */
+.hero_area_video {
+  position: relative;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bg-box_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.bg-box_video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sub_page .hero_area_video {
+  min-height: auto;
+}
+
+.sub_page .hero_area_video .bg-box_video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.sub_page .hero_area_video .bg-box_video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* video end */
 
 .header_section {
   padding: 15px 0;
@@ -174,9 +226,19 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+.nav-item .nav-link{
+  left: 100px;;
+  margin-left: 1rem;
+
+}
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
   color: #ffbe33;
+}
+
+.navbar-brand span:hover:hover{
+  color: #ffbe33;
+
 }
 
 .custom_nav-container .nav_search-btn {
@@ -226,7 +288,7 @@ a:focus {
 }
 
 .user_option .cart_link svg {
-  width: 17px;
+  width: 30px;
   height: auto;
   fill: #ffffff;
   margin-bottom: 2px;
@@ -495,6 +557,7 @@ a:focus {
   padding: 7px 25px;
   cursor: pointer;
   border-radius: 25px;
+  
 }
 
 .food_section .filters_menu li.active {
