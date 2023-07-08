@@ -63,7 +63,7 @@
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-collapse" v-if="isCollapsed" id="navbarSupportedContent">
               <ul class="navbar-nav  mx-auto ">
                 <i class='bx bx-menu' id="menu-icon"></i>
 
