@@ -1388,10 +1388,21 @@ import { onMounted } from 'vue'
 
 export default {
   data() {
-    return {
-      navOpen: false,
-    };
-  },
+        return {
+            isCollapsed: true,
+            links: [
+                { path: "/", label: "Home" },
+                { path: "/menu", label: "Menu" },
+                { path: "/about", label: "About" },
+                { path: "/book", label: "Book Table" },
+            ],
+        };
+    },
+    methods: {
+        toggleNavbar() {
+            this.isCollapsed = !this.isCollapsed;
+        },
+    },
   mounted() {
     // Add external scripts to the DOM
     const script1 = document.createElement('script')
@@ -1448,21 +1459,9 @@ export default {
       import('https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap')
     })
   },
-  methods: {
-    toggleNav() {
-      const nav = document.querySelector("#navbarNav");
-      nav.classList.toggle("show");
-    },
-    hideNav() {
-      this.navOpen = false;
-    },
-  },
+ 
 }
 
 </script>
 
-<style>
-.navbar-collapse.show {
-  display: block;
-}
-</style>
+

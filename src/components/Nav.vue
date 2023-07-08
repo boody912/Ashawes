@@ -202,7 +202,24 @@
 import { onMounted } from 'vue'
 
 export default {
+    data() {
+        return {
+            isCollapsed: true,
+            links: [
+                { path: "/", label: "Home" },
+                { path: "/menu", label: "Menu" },
+                { path: "/about", label: "About" },
+                { path: "/book", label: "Book Table" },
+            ],
+        };
+    },
+    methods: {
+        toggleNavbar() {
+            this.isCollapsed = !this.isCollapsed;
+        },
+    },
     mounted() {
+
         // Add external scripts to the DOM
         const script1 = document.createElement('script')
         script1.src = '../assets/js/jquery-3.4.1.min'
