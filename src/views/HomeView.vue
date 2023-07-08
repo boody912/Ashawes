@@ -53,11 +53,15 @@
               </span>
             </a>
 
+            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button> -->
+
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
               aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
-
 
             <div class="navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav  mx-auto ">
@@ -149,29 +153,6 @@
           </nav>
         </div>
 
-        <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
-          <a class="navbar-brand" href="#">Ashawes</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <router-link class="nav-link" to="/">Home</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/menu">Menu</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/about">About</router-link>
-              </li>
-              <li class="nav-item">
-                <router-link class="nav-link" to="/book">Book a Table</router-link>
-              </li>
-            </ul>
-          </div>
-        </nav> -->
       </header>
 
 
@@ -1475,7 +1456,7 @@ export default {
     hideNav() {
       this.navOpen = false;
     },
-  }, 
+  },
 }
 
 </script>
