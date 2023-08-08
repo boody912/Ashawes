@@ -47,10 +47,13 @@
       <header class="header_section">
         <div class="container">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="#">
+            <!-- <a class="navbar-brand" href="#">
               <span>
                 Ashawes
               </span>
+            </a> -->
+            <a class="navbar-brand" href="#">
+              <img src="/src/assets/images/fav2.png" alt="Ashawes Logo">
             </a>
 
             <button class="navbar-toggler" v-on:click="toggleNavbar()" type="button" data-toggle="collapse"
@@ -187,7 +190,7 @@
 
     <!-- offer section -->
 
-    <section class="offer_section layout_padding-bottom">
+    <!-- <section class="offer_section layout_padding-bottom">
       <div class="offer_container">
         <div class="container ">
           <div class="row">
@@ -238,12 +241,13 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <!-- end offer section -->
 
     <!-- product section -->
 
+    <br><br>
     <section class="food_section layout_padding-bottom">
       <div class="container">
         <div class="heading_container heading_center">
@@ -422,7 +426,7 @@
                 Contact Us
               </h4>
               <div class="contact_link_box">
-              <!--   <a href="">
+                <!--   <a href="">
                   <i class="fa fa-map-marker" aria-hidden="true"></i>
                   <span>
                     Location

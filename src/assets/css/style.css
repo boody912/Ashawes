@@ -203,6 +203,12 @@ a:focus {
   font-family: 'Dancing Script', cursive;
 }
 
+.navbar-brand img {
+  width: 100px; /* Adjust the width and height as needed */
+  height: 100px;
+  margin-left: 00px;
+}
+
 .navbar-brand span {
   font-weight: bold;
   font-size: 32px;
