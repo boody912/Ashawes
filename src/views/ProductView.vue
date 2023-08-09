@@ -46,11 +46,11 @@
             <header class="header_section">
                 <div class="container">
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
-                        <a class="navbar-brand" href="#">
-                            <span>
-                                Ashawes
-                            </span>
+
+                        <a class="navbar-brand" href="/" target="_self" rel="noopener noreferrer">
+                            <img src="/src/assets/images/fav2.png" alt="Ashawes Logo">
                         </a>
+
 
                         <button class="navbar-toggler" v-on:click="toggleNavbar()" type="button" data-toggle="collapse"
                             data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
@@ -77,7 +77,7 @@
                                 <!-- <a href="" class="user_link">
                   <i class="fa fa-user" aria-hidden="true"></i>
                 </a> -->
-                                <a class="cart_link" href="#">
+                                <a class="cart_link" href="/cart">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round"
@@ -108,10 +108,10 @@
                         <h2 style="color: #e69c00;">
                             Our Product
                         </h2>
-                        
+
                     </div>
 
-                    <ul class="filters_menu" >
+                    <ul class="filters_menu">
                         <li class="active" data-filter="*" style="color: white;">All</li>
                         <li data-filter=".tshirts">tshirts</li>
                         <li data-filter=".short">shorts</li>
