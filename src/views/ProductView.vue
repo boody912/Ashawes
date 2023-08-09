@@ -47,7 +47,7 @@
                 <div class="container">
                     <nav class="navbar navbar-expand-lg custom_nav-container ">
 
-                        <a class="navbar-brand" href="/" target="_self" rel="noopener noreferrer">
+                        <a class="navbar-brand" href="/" target="_blank">
                             <img src="/src/assets/images/fav2.png" alt="Ashawes Logo">
                         </a>
 
@@ -77,7 +77,7 @@
                                 <!-- <a href="" class="user_link">
                   <i class="fa fa-user" aria-hidden="true"></i>
                 </a> -->
-                                <a class="cart_link" href="/cart">
+                                <a class="cart_link" href="#">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                         <path strokeLinecap="round" strokeLinejoin="round"
@@ -119,7 +119,7 @@
 
                     <div class="filters-content">
                         <div class="row grid">
-                            <div class="col-sm-12 col-lg-6 all tshirts">
+                            <div class="col-sm-12 offset-md-3 col-lg-6 all tshirts">
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
@@ -132,7 +132,7 @@
                                                 sed eaque</p>
                                             <div class="options">
                                                 <h6>$20</h6>
-                                                <a href="">
+                                                <a href="/cart">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                                                         <path strokeLinecap="round" strokeLinejoin="round"
@@ -144,45 +144,18 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-12 offset-md-6 col-lg-6 all short">
-                                <div class="box">
-                                    <div>
-                                        <div class="img-box">
-                                            <img src="/src/assets/images/short.jpg" alt="">
-                                        </div>
-                                        <div class="detail-box">
-                                            <h5>Shorts</h5>
-                                            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
-                                                voluptatem repellendus
-                                                sed eaque</p>
-                                            <div class="options">
-                                                <h6>$25</h6>
-                                                <a href="">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                                        strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                                                        <path strokeLinecap="round" strokeLinejoin="round"
-                                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                         </div>
                     </div>
 
-                    <!-- <div class="btn-box">
-                    <a href="">
-                        View More
-                    </a>
-                </div> -->
+                  
                 </div>
             </section>
         </div>
         <!-- end food section -->
 
         <!-- footer section -->
+        <br><br><br><br><br>br
         <footer class="footer_section">
             <div class="container">
                 <div class="row">

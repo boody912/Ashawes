@@ -71,7 +71,7 @@
         <div class="row">
           <div class="col-md-6 ">
             <div class="img-box">
-              <img src="/src/assets/images/no.png" alt="">
+              <img src="/src/assets/images/fav3.png" alt="">
             </div>
           </div>
           <div class="col-md-6">

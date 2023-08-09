@@ -259,15 +259,15 @@
           </h2>
         </div>
 
-        <ul class="filters_menu">
+       <!--  <ul class="filters_menu">
           <li class="active" data-filter="*">All</li>
           <li data-filter=".tshirts">tshirts</li>
           <li data-filter=".short">shorts</li>
-        </ul>
+        </ul> -->
 
         <div class="filters-content">
           <div class="row grid">
-            <div class="col-sm-6 col-lg-4 all tshirts">
+            <div class="col-sm-6 offset-md-3 col-lg-6 all tshirts">
               <div class="box">
                 <div>
                   <div class="img-box">
@@ -278,8 +278,8 @@
                     <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
                       sed eaque</p>
                     <div class="options">
-                      <h6>$20</h6>
-                      <a href="">
+                      <h6>EGP 399</h6>
+                      <a href="/cart">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                           stroke="currentColor" className="w-6 h-6">
                           <path strokeLinecap="round" strokeLinejoin="round"
@@ -291,7 +291,8 @@
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-4 all short">
+
+           <!--  <div class="col-sm-6 col-lg-4 all short">
               <div class="box">
                 <div>
                   <div class="img-box">
@@ -314,15 +315,17 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+
           </div>
         </div>
 
-        <div class="btn-box">
+       <!--  <div class="btn-box">
           <a href="">
             View More
           </a>
-        </div>
+        </div> -->
+
       </div>
     </section>
 

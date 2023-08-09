@@ -113,7 +113,7 @@ export default {
                 {
                     name: 'Ashawes tshirt',
                     price: 399,
-                    image: '../assets/images/short.jpg',
+                    image: '/src/assets/images/short.jpg',
                     quantity: 1,
                     size: 'M'
                 },
