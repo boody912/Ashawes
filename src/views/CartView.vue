@@ -65,11 +65,14 @@
                 <img :src="item.image" :alt="item.name" class="product-image">
                 <div class="product-details">
                     <h3>{{ item.name }}</h3>
+                    <br>
                     <p>Price: ${{ item.price }}</p>
+                    <br>
                     <div class="quantity-input">
                         <label for="quantity">Quantity:</label>
                         <input type="number" v-model="item.quantity" min="1" max="10">
                     </div>
+                    <br>
                     <div class="size-input">
                         <label for="size">Size:</label>
                         <select v-model="item.size">
@@ -113,7 +116,7 @@ export default {
                 {
                     name: 'Ashawes tshirt',
                     price: 399,
-                    image: '/src/assets/images/short.jpg',
+                    image: '/src/assets/images/pic.png',
                     quantity: 1,
                     size: 'M'
                 },
