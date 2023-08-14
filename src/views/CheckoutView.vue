@@ -63,51 +63,7 @@
 
         <!-- cart section -->
         <section class="about_section layout_padding">
-            <div class="container  ">
-                <div class="cart">
-                    <h3>Shopping Cart</h3>
-                    <br>
-
-                    <div v-for="(item, index) in cartItems" :key="index" class="cart-item">
-                        <img src="/src/assets/images/try.jpg" class="product-image">
-                        <div class="product-details">
-                            <h3>{{ item.name }}</h3>
-                            <br>
-                            <p>Price:={{ item.price }} EGP</p>
-                            <br>
-                            <div class="quantity-input">
-                                <label for="quantity">Quantity:</label>
-                                <input style="color: black;" type="number" v-model="item.quantity" min="1" max="10">
-                            </div>
-                            <br>
-                            <div class="size-input">
-                                <label for="size">Size:</label>
-                                <select style="color: black;" v-model="item.size">
-                                    <option value="S">S</option>
-                                    <option value="M">M</option>
-                                    <option value="L">L</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="subtotal">
-                        <p>Subtotal: {{ calculateSubtotal }} EGP</p>
-                    </div>
-                    <br>
-                    <div class="subtotal">
-                        <p>Shipping: 50 EGP</p>
-                    </div>
-                    <br>
-                    <div class="subtotal">
-                        <p>Total: {{ calculatetotal }} EGP</p>
-                    </div>
-
-                   <!--  <div class="checkout-button">
-                        <button @click="proceedToCheckout">Proceed to Checkout</button>
-                    </div> -->
-                </div>
-                <br><br><br>
+            <div class="container">
 
                 <div class="row">
                     <div class="col-75">
@@ -174,7 +130,7 @@
                         </div>
                     </div>
 
-                   <!--  <div class="col-25">
+                    <div class="col-25">
                         <div class="container">
                             <h4>Cart
                                 <span class="price" style="color:black">
@@ -186,9 +142,8 @@
                             <hr>
                             <p>Total <span class="price" style="color:black"><b>EGP 30</b></span></p>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
-
 
             </div>
         </section>
@@ -201,12 +156,17 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 footer-col">
-                        <!-- <div class="footer_contact">
+                        <div class="footer_contact">
                             <h4>
                                 Contact Us
                             </h4>
                             <div class="contact_link_box">
-                    
+                                <!--   <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      Location
+                    </span>
+                  </a> -->
                                 <a href="">
                                     <i class="fa fa-phone" aria-hidden="true"></i>
                                     <span>
@@ -220,20 +180,20 @@
                                     </span>
                                 </a>
                             </div>
-                        </div> -->
+                        </div>
                     </div>
                     <div class="col-md-4 footer-col">
                         <div class="footer_detail">
                             <a href="" class="footer-logo">
                                 Ashawes
                             </a>
-                          <!--   <p>
+                            <p>
                                 Necessary, making this the first true generator on the Internet. It uses a dictionary of
                                 over 200 Latin
                                 words, combined with
-                            </p> -->
+                            </p>
                             <div class="footer_social">
-                                <!-- <a href="">
+                                <a href="">
                                     <i class="fa fa-facebook" aria-hidden="true"></i>
                                 </a>
                                 <a href="">
@@ -241,15 +201,17 @@
                                 </a>
                                 <a href="">
                                     <i class="fa fa-linkedin" aria-hidden="true"></i>
-                                </a> -->
-                                <a href="https://www.instagram.com/ashaws.eg/">
+                                </a>
+                                <a href="">
                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                 </a>
-                                
+                                <a href="">
+                                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="col-md-4 footer-col">
+                    <div class="col-md-4 footer-col">
                         <h4>
                             Opening Hours
                         </h4>
@@ -259,7 +221,7 @@
                         <p>
                             10.00 Am -10.00 Pm
                         </p>
-                    </div> -->
+                    </div>
                 </div>
                 <div class="footer-info">
                     <p>
@@ -288,7 +250,7 @@ export default {
                 { path: "/about", label: "About" },
                 { path: "/book", label: "Book Table" },
             ],
-            cartItems: [
+            /* cartItems: [
                 {
                     name: 'Ashawes tshirt',
                     price: 480,
@@ -296,7 +258,7 @@ export default {
                     quantity: 1,
                     size: 'M'
                 },
-            ]
+            ] */
         };
     },
     computed: {
@@ -304,13 +266,7 @@ export default {
             return this.cartItems.reduce((total, item) => {
                 return total + item.price * item.quantity;
             }, 0);
-        },
-        calculatetotal() {
-            return this.cartItems.reduce((total, item) => {
-                return total + item.price * item.quantity;
-            }, 0)+50;
         }
-
     },
     methods: {
         toggleNavbar() {
@@ -319,7 +275,6 @@ export default {
         proceedToCheckout() {
             // Logic for proceeding to checkout
             console.log('Proceeding to checkout');
-            window.location.href = '/check';
         }
     },
 
@@ -469,8 +424,6 @@ span.price {
   }
 }
 </style>
-  
-  
   
   
   
