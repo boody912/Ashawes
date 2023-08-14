@@ -131,7 +131,7 @@
                                                 voluptatem repellendus
                                                 sed eaque</p> -->
                                             <div class="options">
-                                                <h6>EGP 399</h6>
+                                                <h6>EGP 480</h6>
                                                 <a href="/cart">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -155,7 +155,7 @@
         <!-- end food section -->
 
         <!-- footer section -->
-        <br><br><br><br><br>br
+        <br><br><br><br><br><br><br><br><br>
         <footer class="footer_section">
             <div class="container">
                 <div class="row">

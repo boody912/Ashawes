@@ -1,63 +1,70 @@
 <template>
-    <!-- end header section -->
-    <!-- <div class="hero_area"> -->
-        <!-- <div class="bg-box">
-            <img src="../assets/images/nav.jpg" alt="">
-        </div> -->
-        <!-- header section strats -->
-        <header class="header_section" style="background-color: black;">
-            <div class="container">
-                <nav class="navbar navbar-expand-lg custom_nav-container ">
-
-                    <a class="navbar-brand" href="/" target="_self" rel="noopener noreferrer">
-                        <img src="/src/assets/images/fav2.png" alt="Ashawes Logo">
-                    </a>
+    <head>
 
 
-                    <button class="navbar-toggler" v-on:click="toggleNavbar()" type="button" data-toggle="collapse"
-                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+    </head>
 
-                    <div class="navbar-collapse" v-if="!isCollapsed" id="navbarSupportedContent">
-                        <ul class="navbar-nav  mx-auto ">
-                            <i class='bx bx-menu' id="menu-icon"></i>
+    <body class="sub_page">
 
-                            <li class="nav-item ">
-                                <a class="nav-link" href="/">Home </a>
-                            </li>
-                            <li class="nav-item ">
-                                <a class="nav-link" href="/product">product </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/about">About</a>
-                            </li>
-
-                        </ul>
-
-                        <div class="user_option active">
-                            <a class="cart_link" href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
-                                    stroke="currentColor" class="w-6 h-6">
-                                    <path strokeLinecap="round" strokeLinejoin="round"
-                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                                </svg>
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </nav>
-
+        <div class="hero_area">
+            <div class="bg-box">
+                <!-- <img src="images/hero-bg.jpg" alt=""> -->
+                <img src="/src/assets/images/nav.jpg" alt="">
             </div>
+            <!-- header section strats -->
+            <header class="header_section">
+                <div class="container">
+                    <nav class="navbar navbar-expand-lg custom_nav-container ">
 
-        </header>
-        <!-- end header section -->
+                        <a class="navbar-brand" href="/" target="_self" rel="noopener noreferrer">
+                            <img src="/src/assets/images/fav2.png" alt="Ashawes Logo">
+                        </a>
 
 
-        <!-- cart start -->
-        <div class="cart">
+                        <button class="navbar-toggler" v-on:click="toggleNavbar()" type="button" data-toggle="collapse"
+                            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="navbar-collapse" v-if="!isCollapsed" id="navbarSupportedContent">
+                            <ul class="navbar-nav  mx-auto ">
+                                <i class='bx bx-menu' id="menu-icon"></i>
+
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/">Home </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/product">product</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="/about">About </a>
+                                </li>
+
+                            </ul>
+                            <div class="user_option active">
+                                <a class="cart_link" href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        strokeWidth="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path strokeLinecap="round" strokeLinejoin="round"
+                                            d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                    </svg>
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+
+            </header>
+            <!-- end header section -->
+        </div>
+
+        <!-- cart section -->
+        <section class="about_section layout_padding">
+            <div class="container  ">
+                <div class="cart">
             <h3>Shopping Cart</h3>
             <br>
 
@@ -70,7 +77,7 @@
                     <br>
                     <div class="quantity-input">
                         <label for="quantity">Quantity:</label>
-                        <input type="number" v-model="item.quantity" min="1" max="10">
+                        <input style="color: ;" type="number" v-model="item.quantity" min="1" max="10">
                     </div>
                     <br>
                     <div class="size-input">
@@ -95,10 +102,97 @@
         <!-- cart end -->
 
     <!-- </div> -->
+            </div>
+        </section>
+
+        <!-- end cart section -->
+
+        <!-- footer section -->
+        <footer class="footer_section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 footer-col">
+                        <div class="footer_contact">
+                            <h4>
+                                Contact Us
+                            </h4>
+                            <div class="contact_link_box">
+                                <!--   <a href="">
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <span>
+                      Location
+                    </span>
+                  </a> -->
+                                <a href="">
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <span>
+                                        Call +01 1234567890
+                                    </span>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                                    <span>
+                                        demo@gmail.com
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-col">
+                        <div class="footer_detail">
+                            <a href="" class="footer-logo">
+                                Ashawes
+                            </a>
+                            <p>
+                                Necessary, making this the first true generator on the Internet. It uses a dictionary of
+                                over 200 Latin
+                                words, combined with
+                            </p>
+                            <div class="footer_social">
+                                <a href="">
+                                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <a href="">
+                                    <i class="fa fa-pinterest" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 footer-col">
+                        <h4>
+                            Opening Hours
+                        </h4>
+                        <p>
+                            Everyday
+                        </p>
+                        <p>
+                            10.00 Am -10.00 Pm
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-info">
+                    <p>
+                        &copy; <span id="displayYear"></span> All Rights Reserved 2023
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- footer section -->
+
+
+
+    </body>
 </template>
-
-
-
+  
 <script>
 import { onMounted } from 'vue'
 
@@ -115,7 +209,7 @@ export default {
             cartItems: [
                 {
                     name: 'Ashawes tshirt',
-                    price: 399,
+                    price: 480,
                     image: '/src/assets/images/pic.png',
                     quantity: 1,
                     size: 'M'
@@ -203,3 +297,6 @@ export default {
 }
 
 </script>
+  
+  
+  
