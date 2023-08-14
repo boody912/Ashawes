@@ -77,12 +77,12 @@
                     <br>
                     <div class="quantity-input">
                         <label for="quantity">Quantity:</label>
-                        <input style="color: ;" type="number" v-model="item.quantity" min="1" max="10">
+                        <input style="color: black;" type="number" v-model="item.quantity" min="1" max="10">
                     </div>
                     <br>
                     <div class="size-input">
                         <label for="size">Size:</label>
-                        <select v-model="item.size">
+                        <select style="color: black;" v-model="item.size">
                             <option value="S">S</option>
                             <option value="M">M</option>
                             <option value="L">L</option>
