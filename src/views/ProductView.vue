@@ -123,7 +123,7 @@
                                 <div class="box">
                                     <div>
                                         <div class="img-box">
-                                            <img src="/src/assets/images/pic.png" alt="">
+                                            <img src="/src/assets/images/try.jpg" alt="">
                                         </div>
                                         <div class="detail-box">
                                             <h5>tshirt</h5>

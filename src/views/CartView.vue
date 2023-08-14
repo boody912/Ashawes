@@ -69,7 +69,7 @@
             <br>
 
             <div v-for="(item, index) in cartItems" :key="index" class="cart-item">
-                <img src="/src/assets/images/about-img.png"  class="product-image">
+                <img src="/src/assets/images/try.jpg"  class="product-image">
                 <div class="product-details">
                     <h3>{{ item.name }}</h3>
                     <br>
