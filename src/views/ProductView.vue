@@ -127,11 +127,11 @@
                                         </div>
                                         <div class="detail-box">
                                             <h5>tshirt</h5>
-                                            <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
+                                            <!-- <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam
                                                 voluptatem repellendus
-                                                sed eaque</p>
+                                                sed eaque</p> -->
                                             <div class="options">
-                                                <h6>$20</h6>
+                                                <h6>EGP 399</h6>
                                                 <a href="/cart">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

@@ -108,7 +108,7 @@
 
 
       <!-- slider section -->
-      <section class="slider_section ">
+      <!-- <section class="slider_section ">
         <div id="customCarousel1" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             <div class="carousel-item active">
@@ -123,11 +123,7 @@
                         personality.
                         we offer a wide variety of options to suit every taste. Join our community of fashion-forward
                         individuals and discover your own. </p>
-                      <!--  <div class="btn-box">
-                        <a href="" class="btn1">
-                          Order Now
-                        </a>
-                      </div> -->
+                      
                     </div>
                   </div>
                 </div>
@@ -146,11 +142,7 @@
                         to make a positive impact on our community and the environment, while still offering high-quality
                         products. Join us in our mission to make fashion more sustainable and accessible for everyone.
                       </p>
-                      <!--  <div class="btn-box">
-                        <a href="" class="btn1">
-                          Order Now
-                        </a>
-                      </div> -->
+                     
                     </div>
                   </div>
                 </div>
@@ -167,11 +159,7 @@
                         brand is dedicated to providing stylish and comfortable clothing for every occasion. We take pride
                         in using only the finest materials and paying attention to every detail to ensure that you receive
                         the best quality product. Shop with us and experience the comfort and style that you deserve. </p>
-                      <!-- <div class="btn-box">
-                        <a href="" class="btn1">
-                          Order Now
-                        </a>
-                      </div> -->
+                     
                     </div>
                   </div>
                 </div>
@@ -187,8 +175,30 @@
           </div>
         </div>
 
-      </section>
+      </section> -->
       <!-- end slider section -->
+      <section class="about_section layout_padding">
+      <div class="container  ">
+        <div class="row">
+          <div class="col-md-6 ">
+            <div class="img-box">
+              <img src="/src/assets/images/fav3.png" alt="">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="detail-box">
+              <div class="heading_container">
+                <h2>
+                  Ashawes.eg
+                </h2>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     </div>
 
     <!-- offer section -->
@@ -275,8 +285,8 @@
                   </div>
                   <div class="detail-box">
                     <h5>tshirt</h5>
-                    <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
-                      sed eaque</p>
+                    <!-- <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
+                      sed eaque</p> -->
                     <div class="options">
                       <h6>EGP 399</h6>
                       <a href="/cart">

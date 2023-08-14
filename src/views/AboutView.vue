@@ -78,17 +78,17 @@
             <div class="detail-box">
               <div class="heading_container">
                 <h2>
-                  We Are Feane
+                  We Are Ashawes
                 </h2>
               </div>
-              <p>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
-                in some form, by injected humour, or randomised words which don't look even slightly believable. If you
-                are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in
-                the middle of text. All
-              </p>
-              <a href="">
-                Read More
+              <p> At our local clothing brand
+                        we believe that fashion should be sustainable and affordable. That's why we use environmentally
+                        friendly materials and production methods to create our stylish and comfortable clothing. We want
+                        to make a positive impact on our community and the environment, while still offering high-quality
+                        products. Join us in our mission to make fashion more sustainable and accessible for everyone.
+                      </p>
+              <a href="/cart">
+                Order Now
               </a>
             </div>
           </div>
