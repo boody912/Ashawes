@@ -342,7 +342,7 @@ export default {
                     price: 480,
                     image: '/src/assets/images/pic.png',
                     quantity: 1,
-                    size: 's'
+                    size: 'XS'
                 },
             ]
         };
