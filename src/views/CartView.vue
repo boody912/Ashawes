@@ -113,36 +113,6 @@
                 <div class="row">
                     <div class="col-75">
                         <div class="container">
-
-                            <!--  <form action="https://usebasin.com/f/41aee71d13e2" method="POST">
-
-                              
-                                <div class="row">
-                                    <div class="col-50">
-
-                                        <h3>Billing Address</h3>
-                                        <br>
-                                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
-
-                                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                                        <input type="text" id="email" name="email" placeholder="john@example.com">
-
-                                        <label for="number"><i class="fa fa-phone"></i> phone</label>
-                                        <input type="text" id="phone" name="phone" placeholder="0123456789">
-
-                                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
-
-                                        <label for="city"><i class="fa fa-institution"></i> City</label>
-                                        <input type="text" id="city" name="city" placeholder="cairo">
-
-                                    </div>
-                                </div>
-
-                            
-                                <input type="submit" value="submit" class="btnn">
-                            </form> -->
                             <form action="https://usebasin.com/f/41aee71d13e2" method="POST">
 
                                 <div class="row">
@@ -150,19 +120,19 @@
                                         <h3>Billing Address</h3>
                                         <br>
                                         <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+                                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
 
                                         <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                                        <input type="text" id="email" name="email" placeholder="john@example.com">
+                                        <input type="text" id="email" name="email" placeholder="john@example.com" required>
 
                                         <label for="number"><i class="fa fa-phone"></i> Phone</label>
-                                        <input type="text" id="phone" name="phone" placeholder="0123456789">
+                                        <input type="text" id="phone" name="phone" placeholder="0123456789" required>
 
                                         <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+                                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
 
                                         <label for="city"><i class="fa fa-institution"></i> City</label>
-                                        <input type="text" id="city" name="city" placeholder="Cairo">
+                                        <input type="text" id="city" name="city" placeholder="Cairo" required>
                                     </div>
 
                                     <div class="col-25">
@@ -177,12 +147,12 @@
                                                 <div class="quantity-input">
                                                     <label for="quantity">Quantity:</label>
                                                     <input style="color: black;"  type="number" id="quantity" name="quantity" v-model="item.quantity"
-                                                        min="1" max="10">
+                                                        min="1" max="10" required>
                                                 </div>
                                                 <br>
                                                 <div class="size-input">
                                                     <label for="size">Size:</label>
-                                                    <select style="color: black;" id="size" name="size" v-model="item.size">
+                                                    <select style="color: black;" id="size" name="size" v-model="item.size" required>
                                                         <option value="XS">XS</option>
                                                         <option value="S">S</option>
                                                         <option value="M">M</option>
