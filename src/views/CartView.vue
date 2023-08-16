@@ -64,7 +64,7 @@
         <!-- cart section -->
         <section class="about_section layout_padding">
             <div class="container  ">
-                <div class="cart">
+                <!-- <div class="cart">
                     <h3>Shopping Cart</h3>
                     <br>
 
@@ -83,6 +83,7 @@
                             <div class="size-input">
                                 <label for="size">Size:</label>
                                 <select style="color: black;" v-model="item.size">
+                                    <option value="XS">XS</option>
                                     <option value="S">S</option>
                                     <option value="M">M</option>
                                     <option value="L">L</option>
@@ -91,7 +92,7 @@
                         </div>
                     </div>
 
-                    <div class="subtotal">
+                     <div class="subtotal">
                         <p>Subtotal: {{ calculateSubtotal }} EGP</p>
                     </div>
                     <br>
@@ -103,25 +104,22 @@
                         <p>Total: {{ calculatetotal }} EGP</p>
                     </div>
 
-                    <!--  <div class="checkout-button">
+                     <div class="checkout-button">
                         <button @click="proceedToCheckout">Proceed to Checkout</button>
-                    </div> -->
-                </div>
-                <br><br><br>
+                    </div>
+                </div> -->
+
 
                 <div class="row">
                     <div class="col-75">
                         <div class="container">
-                            <form action="https://usebasin.com/f/41aee71d13e2" method="POST">
-                                
-                                
-                                
-                                <input type="hidden" :name="Quantity" :value="this.cartItems.quantity">
-                                <input type="hidden" :name="Size" :value="this.cartItems.size">
-                                <input type="hidden" :name="total" :value=" calculatetotal ">
 
+                            <!--  <form action="https://usebasin.com/f/41aee71d13e2" method="POST">
+
+                              
                                 <div class="row">
                                     <div class="col-50">
+
                                         <h3>Billing Address</h3>
                                         <br>
                                         <label for="fname"><i class="fa fa-user"></i> Full Name</label>
@@ -139,48 +137,88 @@
                                         <label for="city"><i class="fa fa-institution"></i> City</label>
                                         <input type="text" id="city" name="city" placeholder="cairo">
 
+                                    </div>
+                                </div>
 
+                            
+                                <input type="submit" value="submit" class="btnn">
+                            </form> -->
+                            <form action="https://usebasin.com/f/41aee71d13e2" method="POST">
+
+                                <div class="row">
+                                    <div class="col-75">
+                                        <h3>Billing Address</h3>
+                                        <br>
+                                        <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                                        <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+
+                                        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                                        <input type="text" id="email" name="email" placeholder="john@example.com">
+
+                                        <label for="number"><i class="fa fa-phone"></i> Phone</label>
+                                        <input type="text" id="phone" name="phone" placeholder="0123456789">
+
+                                        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+
+                                        <label for="city"><i class="fa fa-institution"></i> City</label>
+                                        <input type="text" id="city" name="city" placeholder="Cairo">
                                     </div>
 
-                                    <!-- <div class="col-50">
-                                        <h3>Payment</h3>
-                                        <label for="fname">Accepted Cards</label>
-                                        <div class="icon-container">
-                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
-                                            <i class="fa fa-cc-amex" style="color:blue;"></i>
-                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
-                                            <i class="fa fa-cc-discover" style="color:orange;"></i>
-                                        </div>
-                                        <label for="cname">Name on Card</label>
-                                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-                                        <label for="ccnum">Credit card number</label>
-                                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
-                                        <label for="expmonth">Exp Month</label>
-                                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
-
-                                        <div class="row">
-                                            <div class="col-50">
-                                                <label for="expyear">Exp Year</label>
-                                                <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                    <div class="col-25">
+                                        <h3>Product Details</h3>
+                                        <div v-for="(item, index) in cartItems" :key="index" class="cart-item">
+                                            <img src="/src/assets/images/try.jpg" class="product-image">
+                                            <div class="product-details">
+                                                <h3>{{ item.name }}</h3>
+                                                <br>
+                                                <p>Price:={{ item.price }} EGP</p>
+                                                <br>
+                                                <div class="quantity-input">
+                                                    <label for="quantity">Quantity:</label>
+                                                    <input style="color: black;" type="number" v-model="item.quantity"
+                                                        min="1" max="10">
+                                                </div>
+                                                <br>
+                                                <div class="size-input">
+                                                    <label for="size">Size:</label>
+                                                    <select style="color: black;" v-model="item.size">
+                                                        <option value="XS">XS</option>
+                                                        <option value="S">S</option>
+                                                        <option value="M">M</option>
+                                                        <option value="L">L</option>
+                                                    </select>
+                                                </div>
                                             </div>
-                                            <div class="col-50">
-                                                <label for="cvv">CVV</label>
-                                                <input type="text" id="cvv" name="cvv" placeholder="352">
-                                            </div>
                                         </div>
-                                    </div> -->
+                                    </div>
 
                                 </div>
-                                <!-- <label>
-                                    <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as
-                                    billing
-                                </label> -->
-                                <input type="submit" value="submit" class="btnn">
+
+                                <div class="container">
+                                    <h4>Cart
+                                        <span class="price" style="color:black">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <b>1</b>
+                                        </span>
+                                    </h4>
+                                    <p><a href="#">Subtotal: &nbsp; </a> <span class="price">{{ calculateSubtotal }}
+                                            EGP</span></p>
+                                    <hr>
+                                    <p><a href="#">Shipping: &nbsp; </a> <span class="price">50 EGP</span></p>
+                                    <hr>
+
+                                    <p>Total: &nbsp; <span class="price" style="color:black"><b>{{ calculatetotal }}
+                                                EGP</b></span></p>
+                                </div>
+
+                                <input type="submit" value="Submit" class="btnn">
                             </form>
+
                         </div>
                     </div>
 
-                    <!--  <div class="col-25">
+                    <!-- <div class="col-25">
                         <div class="container">
                             <h4>Cart
                                 <span class="price" style="color:black">
@@ -188,9 +226,13 @@
                                     <b>1</b>
                                 </span>
                             </h4>
-                            <p><a href="#">tshirt</a> <span class="price">EGP 480</span></p>
+                            <p><a href="#">Subtotal: &nbsp; </a> <span class="price">{{ calculateSubtotal }} EGP</span></p>
                             <hr>
-                            <p>Total <span class="price" style="color:black"><b>EGP 30</b></span></p>
+                            <p><a href="#">Shipping: &nbsp; </a> <span class="price">50 EGP</span></p>
+                            <hr>
+
+                            <p>Total: &nbsp; <span class="price" style="color:black"><b>{{ calculatetotal }} EGP</b></span>
+                            </p>
                         </div>
                     </div> -->
                 </div>
@@ -300,7 +342,7 @@ export default {
                     price: 480,
                     image: '/src/assets/images/pic.png',
                     quantity: 1,
-                    size: 'M'
+                    size: 's'
                 },
             ]
         };

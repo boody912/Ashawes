@@ -1,0 +1,234 @@
+<template>
+    <!-- end header section -->
+    <!-- <div class="hero_area"> -->
+        <!-- <div class="bg-box">
+            <img src="../assets/images/nav.jpg" alt="">
+        </div> -->
+        <!-- header section strats -->
+        <header class="header_section" style="background-color: black;">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+
+                    <a class="navbar-brand" href="/" target="_self" rel="noopener noreferrer">
+                        <img src="/src/assets/images/fav2.png" alt="Ashawes Logo">
+                    </a>
+
+
+                    <button class="navbar-toggler" v-on:click="toggleNavbar()" type="button" data-toggle="collapse"
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="navbar-collapse" v-if="!isCollapsed" id="navbarSupportedContent">
+                        <ul class="navbar-nav  mx-auto ">
+                            <i class='bx bx-menu' id="menu-icon"></i>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/">Home </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="/product">product </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/about">About</a>
+                            </li>
+
+                        </ul>
+
+                        <div class="user_option active">
+                            <a class="cart_link" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5"
+                                    stroke="currentColor" class="w-6 h-6">
+                                    <path strokeLinecap="round" strokeLinejoin="round"
+                                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                                </svg>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </nav>
+
+            </div>
+
+        </header>
+        <!-- end header section -->
+
+
+        <!-- cart start -->
+        <div class="cart">
+            <h3>Shopping Cart</h3>
+            <br>
+
+            <div v-for="(item, index) in cartItems" :key="index" class="cart-item">
+                <img :src="item.image" :alt="item.name" class="product-image">
+                <div class="product-details">
+                    <h3>{{ item.name }}</h3>
+                    <br>
+                    <p>Price: ${{ item.price }}</p>
+                    <br>
+                    <div class="quantity-input">
+                        <label for="quantity">Quantity:</label>
+                        <input type="number" v-model="item.quantity" min="1" max="10">
+                    </div>
+                    <br>
+                    <div class="size-input">
+                        <label for="size">Size:</label>
+                        <select v-model="item.size">
+                            <option value="S">S</option>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="subtotal">
+                <p>Subtotal: ${{ calculateSubtotal }}</p>
+            </div>
+
+            <div class="checkout-button">
+                <button @click="proceedToCheckout">Proceed to Checkout</button>
+            </div>
+        </div>
+        <!-- cart end -->
+
+    <!-- </div> -->
+</template>
+
+
+
+<script>
+import { onMounted } from 'vue'
+
+export default {
+    data() {
+        return {
+            isCollapsed: true,
+            links: [
+                { path: "/", label: "Home" },
+                { path: "/menu", label: "Menu" },
+                { path: "/about", label: "About" },
+                { path: "/book", label: "Book Table" },
+            ],
+            cartItems: [
+                {
+                    name: 'Ashawes tshirt',
+                    price: 399,
+                    image: '/src/assets/images/pic.png',
+                    quantity: 1,
+                    size: 'M'
+                },
+            ]
+        };
+    },
+    computed: {
+        calculateSubtotal() {
+            return this.cartItems.reduce((total, item) => {
+                return total + item.price * item.quantity;
+            }, 0);
+        }
+    },
+    methods: {
+        toggleNavbar() {
+            this.isCollapsed = !this.isCollapsed;
+        },
+        proceedToCheckout() {
+            // Logic for proceeding to checkout
+            console.log('Proceeding to checkout');
+        }
+    },
+
+    mounted() {
+        if (window.innerWidth >= 992) {
+            this.isCollapsed = false;
+        }
+        // Add external scripts to the DOM
+        const script1 = document.createElement('script')
+        script1.src = '../assets/js/jquery-3.4.1.min'
+        script1.src = '../assets/js/jquery-3.4.1.min.js'
+        document.body.appendChild(script1)
+
+        const script2 = document.createElement('script')
+        script2.src = 'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'
+        script2.integrity = 'sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo'
+        script2.crossOrigin = 'anonymous'
+        document.body.appendChild(script2)
+
+        const script3 = document.createElement('script')
+        script3.src = '../assets/js/bootstrap'
+        document.body.appendChild(script3)
+
+        const script4 = document.createElement('script')
+        script4.src = 'https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js'
+        document.body.appendChild(script4)
+
+        const script5 = document.createElement('script')
+        script5.src = 'https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js'
+        document.body.appendChild(script5)
+
+        const script6 = document.createElement('script')
+        script6.src = 'https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js'
+        document.body.appendChild(script6)
+
+        const script7 = document.createElement('script')
+        script7.src = '../assets/js/custom'
+        document.body.appendChild(script7)
+
+        const script8 = document.createElement('script')
+        script8.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap'
+        document.body.appendChild(script8)
+
+        document.addEventListener("click", (event) => {
+            if (this.navOpen && !event.target.closest(".navbar")) {
+                this.hideNav();
+            }
+        });
+    },
+    setup() {
+        // Alternatively, you can import scripts using onMounted
+        onMounted(() => {
+            import('../assets/js/jquery-3.4.1.min')
+            import('https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js')
+            import('../assets/js/bootstrap')
+            import('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js')
+            import('https://unpkg.com/isotope-layout@3.0.4/dist/isotope.pkgd.min.js')
+            import('https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js')
+            import('../assets/js/custom')
+            import('https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap')
+        })
+    },
+
+}
+
+</script>
+
+
+<!-- <div class="col-50">
+                                        <h3>Payment</h3>
+                                        <label for="fname">Accepted Cards</label>
+                                        <div class="icon-container">
+                                            <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                            <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                            <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                            <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                        </div>
+                                        <label for="cname">Name on Card</label>
+                                        <input type="text" id="cname" name="cardname" placeholder="John More Doe">
+                                        <label for="ccnum">Credit card number</label>
+                                        <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+                                        <label for="expmonth">Exp Month</label>
+                                        <input type="text" id="expmonth" name="expmonth" placeholder="September">
+
+                                        <div class="row">
+                                            <div class="col-50">
+                                                <label for="expyear">Exp Year</label>
+                                                <input type="text" id="expyear" name="expyear" placeholder="2018">
+                                            </div>
+                                            <div class="col-50">
+                                                <label for="cvv">CVV</label>
+                                                <input type="text" id="cvv" name="cvv" placeholder="352">
+                                            </div>
+                                        </div>
+                                    </div> -->
