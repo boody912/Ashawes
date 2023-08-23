@@ -131,7 +131,9 @@
                                                 voluptatem repellendus
                                                 sed eaque</p> -->
                                             <div class="options">
-                                                <h6>EGP 480</h6>
+                                                <!-- <h6>EGP 480</h6> -->
+                                                <h6><span class="discounted-price">EGP 450</span> EGP 360 </h6>
+
                                                 <a href="/cart">
                                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                                         strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
@@ -144,11 +146,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
 
-                  
+
                 </div>
             </section>
         </div>
@@ -186,7 +188,7 @@
                             <a href="" class="footer-logo">
                                 Ashawes
                             </a>
-                          <!--   <p>
+                            <!--   <p>
                                 Necessary, making this the first true generator on the Internet. It uses a dictionary of
                                 over 200 Latin
                                 words, combined with
@@ -204,7 +206,7 @@
                                 <a href="https://www.instagram.com/ashaws.eg/">
                                     <i class="fa fa-instagram" aria-hidden="true"></i>
                                 </a>
-                                
+
                             </div>
                         </div>
                     </div>

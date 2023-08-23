@@ -129,7 +129,8 @@
                                         <input type="text" id="phone" name="phone" placeholder="0123456789" required>
 
                                         <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                                        <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"
+                                            required>
 
                                         <label for="city"><i class="fa fa-institution"></i> City</label>
                                         <input type="text" id="city" name="city" placeholder="Cairo" required>
@@ -142,17 +143,20 @@
                                             <div class="product-details">
                                                 <h3>{{ item.name }}</h3>
                                                 <br>
-                                                <p>Price:={{ item.price }} EGP</p>
+                                                <p>
+                                                    <h6>Price: <span class="discounted-price">EGP 450</span> EGP 360 </h6>
+                                                </p>
                                                 <br>
                                                 <div class="quantity-input">
                                                     <label for="quantity">Quantity:</label>
-                                                    <input style="color: black;"  type="number" id="quantity" name="quantity" v-model="item.quantity"
-                                                        min="1" max="10" required>
+                                                    <input style="color: black;" type="number" id="quantity" name="quantity"
+                                                        v-model="item.quantity" min="1" max="10" required>
                                                 </div>
                                                 <br>
                                                 <div class="size-input">
                                                     <label for="size">Size:</label>
-                                                    <select style="color: black;" id="size" name="size" v-model="item.size" required>
+                                                    <select style="color: black;" id="size" name="size" v-model="item.size"
+                                                        required>
                                                         <option value="XS">XS</option>
                                                         <option value="S">S</option>
                                                         <option value="M">M</option>
@@ -172,13 +176,16 @@
                                             <b>1</b>
                                         </span>
                                     </h4>
-                                    <p><a href="#">Subtotal: &nbsp; </a> <span class="price">{{ calculateSubtotal }}
+                                    <p><a href="#">T-shirt: &nbsp; </a> <span
+                                            class="price">360<!-- {{ calculateSubtotal }} -->
                                             EGP</span></p>
-                                    <hr>
-                                    <p><a href="#">Shipping: &nbsp; </a> <span class="price">50 EGP</span></p>
+
                                     <hr>
 
-                                    <p>Total: &nbsp; <span class="price" style="color:black"><b>{{ calculatetotal }}
+                                    <!--  <p><a href="#">Shipping: &nbsp; </a> <span class="price">50 EGP</span></p>
+                                    <hr> -->
+
+                                    <p>Total: &nbsp; <span class="price" style="color:black"><b>{{ calculateSubtotal }}
                                                 EGP</b></span></p>
                                 </div>
 
@@ -309,7 +316,7 @@ export default {
             cartItems: [
                 {
                     name: 'Ashawes tshirt',
-                    price: 480,
+                    price: 360,
                     image: '/src/assets/images/pic.png',
                     quantity: 1,
                     size: 'XS'
