@@ -139,12 +139,35 @@
                                     <div class="col-25">
                                         <h3>Product Details</h3>
                                         <div v-for="(item, index) in cartItems" :key="index" class="cart-item">
-                                            <img src="/src/assets/images/try.jpg" class="product-image">
+                                            <!-- <img src="/src/assets/images/try.jpg" class="product-image"> -->
+                                            <div class="slider">
+                                                <div class="slider-container">
+                                                    <img src="/src/assets/images/image1.jpeg" alt="Image 1">
+                                                    <img src="/src/assets/images/image2.jpeg" alt="Image 2">
+                                                    <img src="/src/assets/images/image3.jpeg" alt="Image 3">
+                                                    <img src="/src/assets/images/image4.jpeg" alt="Image 4">
+                                                    <img src="/src/assets/images/image5.jpeg" alt="Image 5">
+                                                    <img src="/src/assets/images/image6.jpeg" alt="Image 6">
+                                                    <img src="/src/assets/images/image7.jpeg" alt="Image 7">
+                                                    <img src="/src/assets/images/image8.jpeg" alt="Image 8">
+                                                    <img src="/src/assets/images/image9.jpeg" alt="Image 9">
+                                                    <img src="/src/assets/images/image10.jpeg" alt="Image 10">
+                                                    <img src="/src/assets/images/image11.jpeg" alt="Image 11">
+                                                    <img src="/src/assets/images/image13.jpeg" alt="Image 12">
+                                                    <!-- Add more images here -->
+                                                </div>
+                                                <button id="prevButton">Previous</button>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <button id="nextButton">Next</button>
+                                            </div>
+                                            <br>
                                             <div class="product-details">
                                                 <h3>{{ item.name }}</h3>
                                                 <br>
                                                 <p>
-                                                    <h6>Price: <span class="discounted-price">EGP 450</span> EGP 360 </h6>
+                                                <h6>Price: <span class="discounted-price">EGP 450</span> EGP 360 </h6>
                                                 </p>
                                                 <br>
                                                 <div class="quantity-input">
@@ -334,6 +357,57 @@ export default {
             return this.cartItems.reduce((total, item) => {
                 return total + item.price * item.quantity;
             }, 0) + 50;
+        },
+        initializeSlider() {
+            // Get the slider container
+            var sliderContainer = document.querySelector('.slider-container');
+
+            // Set the initial position
+            var position = 0;
+
+            // Calculate the slide width based on the number of visible slides
+            var slideWidth = sliderContainer.offsetWidth / 3; // Adjust the number according to the desired number of visible slides
+
+            // Variables for tracking swipe gestures
+            var touchStartX = 0;
+            var touchEndX = 0;
+
+            // Function to handle the slide movement
+            function slide(direction) {
+                // Calculate the new position based on the slide width and direction
+                position += direction * slideWidth;
+
+                // Apply the transform style to move the slider
+                sliderContainer.style.transform = 'translateX(' + position + 'px)';
+            }
+
+            // Event listeners for previous and next buttons
+            document.getElementById('prevButton').addEventListener('click', function () {
+                slide(1); // Slide to the right
+            });
+
+            document.getElementById('nextButton').addEventListener('click', function () {
+                slide(-1); // Slide to the left
+            });
+
+            // Touch event listeners for swipe
+            sliderContainer.addEventListener('touchstart', function (event) {
+                touchStartX = event.touches[0].clientX;
+            });
+
+            sliderContainer.addEventListener('touchmove', function (event) {
+                touchEndX = event.touches[0].clientX;
+            });
+
+            sliderContainer.addEventListener('touchend', function () {
+                var swipeThreshold = slideWidth / 3; // Adjust the threshold as needed
+
+                if (touchStartX - touchEndX > swipeThreshold) {
+                    slide(-1); // Slide to the left
+                } else if (touchEndX - touchStartX > swipeThreshold) {
+                    slide(1); // Slide to the right
+                }
+            });
         }
 
     },
@@ -345,10 +419,62 @@ export default {
             // Logic for proceeding to checkout
             console.log('Proceeding to checkout');
             window.location.href = '/check';
+        },
+        initializeSlider() {
+            // Get the slider container
+            var sliderContainer = document.querySelector('.slider-container');
+
+            // Set the initial position
+            var position = 0;
+
+            // Calculate the slide width based on the number of visible slides
+            var slideWidth = sliderContainer.offsetWidth / 3; // Adjust the number according to the desired number of visible slides
+
+            // Variables for tracking swipe gestures
+            var touchStartX = 0;
+            var touchEndX = 0;
+
+            // Function to handle the slide movement
+            function slide(direction) {
+                // Calculate the new position based on the slide width and direction
+                position += direction * slideWidth;
+
+                // Apply the transform style to move the slider
+                sliderContainer.style.transform = 'translateX(' + position + 'px)';
+            }
+
+            // Event listeners for previous and next buttons
+            document.getElementById('prevButton').addEventListener('click', function () {
+                slide(1); // Slide to the right
+            });
+
+            document.getElementById('nextButton').addEventListener('click', function () {
+                slide(-1); // Slide to the left
+            });
+
+            // Touch event listeners for swipe
+            sliderContainer.addEventListener('touchstart', function (event) {
+                touchStartX = event.touches[0].clientX;
+            });
+
+            sliderContainer.addEventListener('touchmove', function (event) {
+                touchEndX = event.touches[0].clientX;
+            });
+
+            sliderContainer.addEventListener('touchend', function () {
+                var swipeThreshold = slideWidth / 3; // Adjust the threshold as needed
+
+                if (touchStartX - touchEndX > swipeThreshold) {
+                    slide(-1); // Slide to the left
+                } else if (touchEndX - touchStartX > swipeThreshold) {
+                    slide(1); // Slide to the right
+                }
+            });
         }
     },
 
     mounted() {
+        this.initializeSlider();
         if (window.innerWidth >= 992) {
             this.isCollapsed = false;
         }
@@ -409,6 +535,7 @@ export default {
     },
 
 }
+
 
 </script>
 
@@ -499,6 +626,21 @@ span.price {
     .col-25 {
         margin-bottom: 20px;
     }
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-container img {
+    width: 100%;
+    height: auto;
 }
 </style>
   
