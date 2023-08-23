@@ -427,7 +427,7 @@ export default {
             var position = 0;
 
             // Calculate the slide width based on the number of visible slides
-            var slideWidth = sliderContainer.offsetWidth / 3; // Adjust the number according to the desired number of visible slides
+            var slideWidth = sliderContainer.offsetWidth / 1; // Adjust the number according to the desired number of visible slides
 
             // Variables for tracking swipe gestures
             var touchStartX = 0;
@@ -436,7 +436,7 @@ export default {
             // Function to handle the slide movement
             function slide(direction) {
                 // Calculate the new position based on the slide width and direction
-                position += direction * slideWidth * 3;
+                position += direction * slideWidth ;
 
                 // Apply the transform style to move the slider
                 sliderContainer.style.transform = 'translateX(' + position + 'px)';
@@ -461,7 +461,7 @@ export default {
             });
 
             sliderContainer.addEventListener('touchend', function () {
-                var swipeThreshold = slideWidth / 3; // Adjust the threshold as needed
+                var swipeThreshold = slideWidth / 1; // Adjust the threshold as needed
 
                 if (touchStartX - touchEndX > swipeThreshold) {
                     slide(-1); // Slide to the left
