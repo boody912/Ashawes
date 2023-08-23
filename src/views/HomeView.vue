@@ -288,7 +288,7 @@
                     <!-- <p>Veniam debitis quaerat officiis quasi cupiditate quo, quisquam velit, magnam voluptatem repellendus
                       sed eaque</p> -->
                     <div class="options">
-                      <h6><span class="discounted-price">EGP 450</span> EGP 360 </h6>
+                      <h6><span class="discounted-price">EGP 500</span> EGP 360 </h6>
                       <a href="/cart">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
                           stroke="currentColor" className="w-6 h-6">

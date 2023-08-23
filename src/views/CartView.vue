@@ -167,7 +167,7 @@
                                                 <h3>{{ item.name }}</h3>
                                                 <br>
                                                 <p>
-                                                <h6>Price: <span class="discounted-price">EGP 450</span> EGP 360 </h6>
+                                                <h6>Price: <span class="discounted-price">EGP 500</span> EGP 360 </h6>
                                                 </p>
                                                 <br>
                                                 <div class="quantity-input">
@@ -199,16 +199,15 @@
                                             <b>1</b>
                                         </span>
                                     </h4>
-                                    <p><a href="#">T-shirt: &nbsp; </a> <span
-                                            class="price">360<!-- {{ calculateSubtotal }} -->
+                                    <p><a href="#">T-shirt: &nbsp; </a> <span class="price">{{ calculateSubtotal }}
                                             EGP</span></p>
 
                                     <hr>
 
-                                    <!--  <p><a href="#">Shipping: &nbsp; </a> <span class="price">50 EGP</span></p>
-                                    <hr> -->
+                                    <p><a href="#">Shipping: &nbsp; </a> <span class="price">50 EGP</span></p>
+                                    <hr>
 
-                                    <p>Total: &nbsp; <span class="price" style="color:black"><b>{{ calculateSubtotal }}
+                                    <p>Total: &nbsp; <span class="price" style="color:black"><b>{{ calculatetotal }}
                                                 EGP</b></span></p>
                                 </div>
 
@@ -358,7 +357,7 @@ export default {
                 return total + item.price * item.quantity;
             }, 0) + 50;
         },
-        initializeSlider() {
+        /* initializeSlider() {
             // Get the slider container
             var sliderContainer = document.querySelector('.slider-container');
 
@@ -408,7 +407,7 @@ export default {
                     slide(1); // Slide to the right
                 }
             });
-        }
+        } */
 
     },
     methods: {
@@ -437,7 +436,7 @@ export default {
             // Function to handle the slide movement
             function slide(direction) {
                 // Calculate the new position based on the slide width and direction
-                position += direction * slideWidth;
+                position += direction * slideWidth * 3;
 
                 // Apply the transform style to move the slider
                 sliderContainer.style.transform = 'translateX(' + position + 'px)';
@@ -471,6 +470,9 @@ export default {
                 }
             });
         }
+
+
+       
     },
 
     mounted() {
